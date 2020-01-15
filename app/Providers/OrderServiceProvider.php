@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Repositories\OrderRepository;
+use App\Services\OrderService;
 use App\Interfaces\OrderInterface;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,7 +15,7 @@ class OrderServiceProvider extends ServiceProvider
     {
         $this->app->bind(
             OrderInterface::class,
-            OrderRepository::class
+            OrderService::class
         );
     }
 }
